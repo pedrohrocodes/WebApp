@@ -1,6 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:web_app/constants.dart';
+import 'components/glass_content.dart';
 
 class TopSection extends StatelessWidget {
   @override
@@ -15,20 +16,16 @@ class TopSection extends StatelessWidget {
               fit: BoxFit.cover,
               image: AssetImage("assets/images/background.png"))),
       child: Container(
+        margin: EdgeInsets.only(top: kDefaultPadding),
         width: 1200,
-        child: Column(
-          children: [
-            Image.asset("assets/images/Logo.png"),
-            GlassContent(size: size)
-          ],
-        ),
+        child: LogoAndBlurBox(size: size),
       ),
     );
   }
 }
 
-class GlassContent extends StatelessWidget {
-  const GlassContent({
+class LogoAndBlurBox extends StatelessWidget {
+  const LogoAndBlurBox({
     Key key,
     @required this.size,
   }) : super(key: key);
@@ -37,16 +34,15 @@ class GlassContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: Container(
-          constraints:
-              BoxConstraints(maxWidth: 1110, maxHeight: size.height * 0.7),
-          color: Colors.white.withOpacity(0),
-        ),
-      ),
+    return Column(
+      children: [
+        Image.asset("assets/images/Logo.png"),
+        Spacer(),
+        GlassContent(size: size),
+        Spacer(
+          flex: 3,
+        )
+      ],
     );
   }
 }
