@@ -1,7 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:web_app/constants.dart';
-import 'components/glass_content.dart';
+import 'components/logo_and_blur_box.dart';
+import 'components/person_pic.dart';
 
 class TopSection extends StatelessWidget {
   @override
@@ -9,6 +10,7 @@ class TopSection extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
+      alignment: Alignment.center,
       constraints: BoxConstraints(maxHeight: 900, minHeight: 700),
       width: double.infinity,
       decoration: BoxDecoration(
@@ -16,33 +18,93 @@ class TopSection extends StatelessWidget {
               fit: BoxFit.cover,
               image: AssetImage("assets/images/background.png"))),
       child: Container(
-        margin: EdgeInsets.only(top: kDefaultPadding),
-        width: 1200,
-        child: LogoAndBlurBox(size: size),
-      ),
+          margin: EdgeInsets.only(top: kDefaultPadding),
+          width: 1200,
+          child: Stack(
+            children: [
+              LogoAndBlurBox(size: size),
+              Positioned(bottom: 0, right: 0, child: PersonPic()),
+              Positioned(bottom: 0, child: Menu())
+            ],
+          )),
     );
   }
 }
 
-class LogoAndBlurBox extends StatelessWidget {
-  const LogoAndBlurBox({
-    Key key,
-    @required this.size,
-  }) : super(key: key);
+class Menu extends StatefulWidget {
+  @override
+  _MenuState createState() => _MenuState();
+}
 
-  final Size size;
+class _MenuState extends State<Menu> {
+  int selectedIndex = 0;
+  int hoverIndex = 0;
+
+  List<String> menuItems = [
+    "Home",
+    "Abour",
+    "Services",
+    "Portfolio",
+    "Testimonial",
+    "Contact"
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset("assets/images/Logo.png"),
-        Spacer(),
-        GlassContent(size: size),
-        Spacer(
-          flex: 3,
-        )
-      ],
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2.5),
+      constraints: BoxConstraints(maxWidth: 1110),
+      height: 100,
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+          boxShadow: [kDefaultShadow]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children:
+            List.generate(menuItems.length, (index) => buildMenuItem(index)),
+      ),
     );
   }
+
+  Widget buildMenuItem(int index) => InkWell(
+        onTap: () {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
+        onHover: (value) {
+          setState(() {
+            value ? hoverIndex = index : hoverIndex = selectedIndex;
+          });
+        },
+        child: Container(
+          constraints: BoxConstraints(minWidth: 122),
+          height: 100,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Text(
+                menuItems[index],
+                style: TextStyle(fontSize: 20, color: kTextColor),
+              ),
+              AnimatedPositioned(
+                  duration: Duration(milliseconds: 200),
+                  left: 0,
+                  right: 0,
+                  bottom:
+                      selectedIndex != index && hoverIndex == index ? -20 : -32,
+                  child: Image.asset("assets/images/Hover.png")),
+              AnimatedPositioned(
+                duration: Duration(milliseconds: 200),
+                left: 0,
+                right: 0,
+                bottom: selectedIndex == index ? -2 : -32,
+                child: Image.asset("assets/images/Hover.png"),
+              )
+            ],
+          ),
+        ),
+      );
 }

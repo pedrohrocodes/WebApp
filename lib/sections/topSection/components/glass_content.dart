@@ -34,14 +34,14 @@ class GlassContent extends StatelessWidget {
                     .copyWith(color: Colors.white),
               ),
               Text(
-                "Robble \nRutherford",
+                "PEDROHRO \nCODES",
                 style: TextStyle(
                     fontSize: 100,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     height: 1.5),
               ),
-              Text("Creative Design Director",
+              Text("FLUTTER DEVELOPER",
                   style: Theme.of(context)
                       .textTheme
                       .headline5
