@@ -42,7 +42,7 @@ class _MenuState extends State<Menu> {
 
   List<String> menuItems = [
     "Home",
-    "Abour",
+    "About",
     "Services",
     "Portfolio",
     "Testimonial",

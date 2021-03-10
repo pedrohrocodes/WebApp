@@ -47,7 +47,11 @@ class AboutSection extends StatelessWidget {
               SizedBox(
                 width: kDefaultPadding * 1.5,
               ),
-              DefaultButton()
+              DefaultButton(
+                imageSrc: "assets/images/download.png",
+                text: "Download CV",
+                press: () {},
+              )
             ],
           )
         ],

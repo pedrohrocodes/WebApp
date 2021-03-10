@@ -27,6 +27,6 @@ List<Service> services = [
   Service(
       id: 4,
       title: "Graphic Design",
-      image: "assets/images/Interaction_design.png",
+      image: "assets/images/Intreaction_design.png",
       color: Color(0xFFFFE0E0)),
 ];
