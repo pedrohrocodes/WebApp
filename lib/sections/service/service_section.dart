@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/section_title.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/models/service.dart';
+import '/components/section_title.dart';
+import '/constants.dart';
+import '/models/service.dart';
 
 import 'components/service_card.dart';
 

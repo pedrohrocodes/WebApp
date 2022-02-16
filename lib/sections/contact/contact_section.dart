@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/default_button.dart';
-import 'package:web_app/components/section_title.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/sections/contact/components/social_card.dart';
+import '/components/default_button.dart';
+import '/components/section_title.dart';
+import '/constants.dart';
+import '/sections/contact/components/social_card.dart';
 
 class ContactSection extends StatelessWidget {
   @override

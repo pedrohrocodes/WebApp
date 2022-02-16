@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/default_button.dart';
-import 'package:web_app/constants.dart';
+import '/components/default_button.dart';
+import '/constants.dart';
 
 class HireMeCard extends StatelessWidget {
   @override

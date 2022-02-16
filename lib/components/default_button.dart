@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/constants.dart';
+import '/constants.dart';
 
 class DefaultButton extends StatelessWidget {
   final String imageSrc, text;

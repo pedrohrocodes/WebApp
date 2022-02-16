@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/models/feedback.dart';
+import '/constants.dart';
+import '/models/feedback.dart';
 
 class FeedbackCard extends StatefulWidget {
   final int index;

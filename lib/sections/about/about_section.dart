@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/default_button.dart';
-import 'package:web_app/components/my_outline_button.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/sections/about/components/experience_card.dart';
+import '/components/default_button.dart';
+import '/components/my_outline_button.dart';
+import '/constants.dart';
+import '/sections/about/components/experience_card.dart';
 
 import 'components/about_section_text.dart';
 import 'components/about_text_with_sign.dart';

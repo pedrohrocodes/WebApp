@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/models/recent_work.dart';
+import '/constants.dart';
+import '/models/recent_work.dart';
 
 class RecentWorkCard extends StatefulWidget {
   final int index;

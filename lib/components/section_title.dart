@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/constants.dart';
+import '/constants.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title, subTitle;

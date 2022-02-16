@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/models/service.dart';
+import '/constants.dart';
+import '/models/service.dart';
 
 class ServiceCard extends StatefulWidget {
   final int index;

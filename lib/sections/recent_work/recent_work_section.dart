@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/components/hireme_card.dart';
-import 'package:web_app/components/section_title.dart';
-import 'package:web_app/constants.dart';
-import 'package:web_app/models/recent_work.dart';
-import 'package:web_app/sections/recent_work/components/recent_work_card.dart';
+import '/components/hireme_card.dart';
+import '/components/section_title.dart';
+import '/constants.dart';
+import '/models/recent_work.dart';
+import '/sections/recent_work/components/recent_work_card.dart';
 
 class RecentWorkSection extends StatelessWidget {
   @override
