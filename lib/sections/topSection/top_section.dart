@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:web_app/constants.dart';
 import 'components/logo_and_blur_box.dart';
@@ -10,20 +9,20 @@ class TopSection extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
+      color: Colors.black,
       alignment: Alignment.center,
       constraints: BoxConstraints(maxHeight: 900, minHeight: 700),
       width: double.infinity,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage("assets/images/background.png"))),
+      // decoration: BoxDecoration(
+      //     image: DecorationImage(
+      //         fit: BoxFit.cover,
+      //         image: AssetImage("assets/images/background.png"))),
       child: Container(
           margin: EdgeInsets.only(top: kDefaultPadding),
           width: 1200,
           child: Stack(
             children: [
               LogoAndBlurBox(size: size),
-              Positioned(bottom: 0, right: 0, child: PersonPic()),
               Positioned(bottom: 0, child: Menu())
             ],
           )),
@@ -41,12 +40,12 @@ class _MenuState extends State<Menu> {
   int hoverIndex = 0;
 
   List<String> menuItems = [
-    "Home",
-    "About",
-    "Services",
-    "Portfolio",
-    "Testimonial",
-    "Contact"
+    "Início",
+    "Sobre Nós",
+    "Serviços",
+    "Portfólio",
+    "Comentários",
+    "Contato"
   ];
 
   @override

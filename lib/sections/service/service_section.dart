@@ -14,9 +14,9 @@ class ServiceSection extends StatelessWidget {
       child: Column(
         children: [
           SectionTitle(
-            color: Color(0xFFFF0000),
-            title: "Service Offerings",
-            subTitle: "My Strong Arenas",
+            color: Colors.white,
+            title: "Serviços Oferecidos",
+            subTitle: "Nossas Áreas Fortes",
           ),
           Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

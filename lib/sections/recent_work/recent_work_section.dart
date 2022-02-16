@@ -12,10 +12,8 @@ class RecentWorkSection extends StatelessWidget {
       margin: EdgeInsets.only(top: kDefaultPadding * 6),
       width: double.infinity,
       decoration: BoxDecoration(
-          color: Color(0xFFF7E8FF).withOpacity(0.3),
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage("assets/images/recent_work_bg.png"))),
+        color: Colors.black.withOpacity(0.3),
+      ),
       child: Column(
         children: [
           Transform.translate(
@@ -23,9 +21,9 @@ class RecentWorkSection extends StatelessWidget {
             child: HireMeCard(),
           ),
           SectionTitle(
-            title: "Recent Works",
-            subTitle: "My Strong Arenas",
-            color: Color(0xFFFFB100),
+            title: "Trabalhos Recentes",
+            subTitle: "Nossas Áreas Fortes",
+            color: Colors.white,
           ),
           SizedBox(
             height: kDefaultPadding * 1.5,

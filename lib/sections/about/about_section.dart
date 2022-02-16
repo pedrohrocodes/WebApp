@@ -42,7 +42,7 @@ class AboutSection extends StatelessWidget {
             children: [
               MyOutlineButton(
                   imageSrc: "assets/images/hand.png",
-                  text: "Hire Me!",
+                  text: "Entre em contato com a gentet!",
                   press: () {}),
               SizedBox(
                 width: kDefaultPadding * 1.5,

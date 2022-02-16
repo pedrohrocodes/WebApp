@@ -31,7 +31,7 @@ class _ServiceCardState extends State<ServiceCard> {
         height: 256,
         width: 256,
         decoration: BoxDecoration(
-            color: services[widget.index].color,
+            color: Colors.white,
             borderRadius: BorderRadius.circular(10),
             boxShadow: [if (isHover) kDefaultShadow]),
         child: Column(
@@ -60,7 +60,7 @@ class _ServiceCardState extends State<ServiceCard> {
             SizedBox(height: kDefaultPadding),
             Text(
               services[widget.index].title,
-              style: TextStyle(fontSize: 22),
+              style: TextStyle(fontSize: 22, color: Colors.black),
             )
           ],
         ),

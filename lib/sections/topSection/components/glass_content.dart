@@ -27,21 +27,15 @@ class GlassContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Hello There!",
+                "              Bem vindo(a) a",
                 style: Theme.of(context)
                     .textTheme
                     .headline5
                     .copyWith(color: Colors.white),
               ),
+              Image.asset("assets/images/blackParrotLogoBranca.png"),
               Text(
-                "PedroHRO\nCodes",
-                style: TextStyle(
-                    fontSize: 100,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    height: 1.5),
-              ),
-              Text("Flutter Developer",
+                  "              A empresa que você busca para tornar seu projeto realidade",
                   style: Theme.of(context)
                       .textTheme
                       .headline5

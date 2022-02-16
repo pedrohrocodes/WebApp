@@ -29,7 +29,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
         duration: duration,
         margin: EdgeInsets.only(top: kDefaultPadding * 3),
         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        height: 350,
+        height: 400,
         width: 350,
         decoration: BoxDecoration(
             color: feedbacks[widget.index].color,
@@ -38,7 +38,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
         child: Column(
           children: [
             Transform.translate(
-              offset: Offset(0, -55),
+              offset: Offset(0, -15),
               child: AnimatedContainer(
                 duration: duration,
                 height: 100,
@@ -63,10 +63,17 @@ class _FeedbackCardState extends State<FeedbackCard> {
             SizedBox(
               height: kDefaultPadding * 2,
             ),
-            Text(
-              "PedroHROCodes",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
+            Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                feedbacks[widget.index].name,
+                textAlign: TextAlign.end,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: kDefaultPadding,
+            ),
           ],
         ),
       ),

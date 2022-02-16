@@ -26,7 +26,10 @@ class MyOutlineButton extends StatelessWidget {
           SizedBox(
             width: kDefaultPadding,
           ),
-          Text(text)
+          Text(
+            text,
+            style: TextStyle(color: Colors.white),
+          )
         ],
       ),
     ));

@@ -9,20 +9,16 @@ class ContactSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(
-          color: Color(0xFFE8F0F9),
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage("assets/images/bg_img_2.png"))),
+      decoration: BoxDecoration(color: Colors.black),
       child: Column(
         children: [
           SizedBox(
             height: kDefaultPadding * 2.5,
           ),
           SectionTitle(
-            title: "Contact Me",
-            subTitle: "For Project inquiry and information",
-            color: Color(0xFF07E24A),
+            title: "Entre em contato",
+            subTitle: "Para orçamento e informações do projeto",
+            color: Colors.white,
           ),
           ContactBox()
         ],
@@ -90,7 +86,7 @@ class ContactForm extends StatelessWidget {
             child: TextFormField(
               onChanged: (value) {},
               decoration: InputDecoration(
-                  labelText: "Your Name", hintText: "Enter Your Name"),
+                  labelText: "Seu nome", hintText: "Entre com seu nome"),
             ),
           ),
           SizedBox(
@@ -98,7 +94,8 @@ class ContactForm extends StatelessWidget {
             child: TextFormField(
               onChanged: (value) {},
               decoration: InputDecoration(
-                  labelText: "Project Type", hintText: "Select Project Type"),
+                  labelText: "Tipo do Projeto",
+                  hintText: "Selecione um tipo de projeto"),
             ),
           ),
           SizedBox(
@@ -106,15 +103,15 @@ class ContactForm extends StatelessWidget {
             child: TextFormField(
               onChanged: (value) {},
               decoration: InputDecoration(
-                  labelText: "Project Budget",
-                  hintText: "Select Project Budget"),
+                  labelText: "Orçamento",
+                  hintText: "Selecione o orçamento do projeto"),
             ),
           ),
           SizedBox(
             child: TextFormField(
               onChanged: (value) {},
               decoration: InputDecoration(
-                  labelText: "Description", hintText: "Write some description"),
+                  labelText: "Descrição", hintText: "Escreva alguma descrição"),
             ),
           ),
           SizedBox(
@@ -124,7 +121,7 @@ class ContactForm extends StatelessWidget {
             child: FittedBox(
               child: DefaultButton(
                 imageSrc: "assets/images/contact_icon.png",
-                text: "Contact Me!",
+                text: "Entre em contato conosco!",
                 press: () {},
               ),
             ),
